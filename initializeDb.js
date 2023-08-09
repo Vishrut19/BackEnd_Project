@@ -2,7 +2,7 @@ const sqlite3 = require("sqlite3").verbose();
 const csv = require("csv-parser");
 const fs = require("fs");
 
-let db = new sqlite3.Database("./movies.db", (err) => {
+let db = new sqlite3.Database(":memory:", (err) => {
   if (err) {
     console.error(err.message);
   }
